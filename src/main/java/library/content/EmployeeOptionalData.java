@@ -54,13 +54,8 @@ public class EmployeeOptionalData  {
 	private String grade;	
 	@XmlElement(name="CostCenter",namespace="EmpOptType")
 	private String costCentre;
-	
-//	private List<Allowance> Z_taxablePermanentAllowances = new ArrayList<>();
-//	private List<Allowance> Z_nonTaxablePermanentAllowances = new ArrayList<>();
-	
-	
 
-	public String getStreet() {
+	public String getStreet() {		
 		return street;
 	}	
 	public void setStreet(String street) {
