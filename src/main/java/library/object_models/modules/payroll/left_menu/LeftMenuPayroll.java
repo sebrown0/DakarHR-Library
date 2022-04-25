@@ -1,26 +1,26 @@
 package library.object_models.modules.payroll.left_menu;
 
-import java.util.Arrays;
+import library.object_models.modules.payroll.left_menu.employees.SalaryDetails;
 import java.util.List;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import library.left_menu.LeftMenuElements;
-import library.object_models.modules.payroll.left_menu.employees.ContactNumbers;
+
 /**
 * Generated Class.
 * ----------------
-* Source:  C:/Users/SteveBrown/eclipse-workspace/2021/AUT_DECOUPLE/src/main/resources/xml/site_map.xml
+* Source:  C:/Users/SteveBrown/eclipse-workspace/2021/DakarHR-Library/src/main/resources/xml/site_map.xml
 * Author:  SteveBrown
 * Version: 1.0.0
-* Created: 13/04/2022 09:31:28
+* Created: 25/04/2022 13:30:09
 */
 
 public class LeftMenuPayroll implements LeftMenuElements {
 	private static final List<String> EMPLOYEES = Arrays.asList(
-		ContactNumbers.MENU_TITLE
+		SalaryDetails.MENU_TITLE
 	);
 	public List<String> getEmployees() {
 		return EMPLOYEES;

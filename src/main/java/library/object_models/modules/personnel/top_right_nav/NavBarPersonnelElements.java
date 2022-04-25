@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import core_data.CoreData;
-import library.nav.NavBarElement;
 import library.nav.nav_bar_elements.NavBarDakarIntelligence;
+import library.nav.nav_bar_elements.NavBarElement;
 import library.nav.nav_bar_elements.NavBarElementStrategy;
 import library.nav.nav_bar_elements.NavBarEmpGridView;
 import library.nav.nav_bar_elements.NavBarEmployeeCVPayroll;

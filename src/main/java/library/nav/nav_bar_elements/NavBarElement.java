@@ -1,7 +1,7 @@
 /**
  * 
  */
-package library.nav;
+package library.nav.nav_bar_elements;
 
 import java.time.Duration;
 

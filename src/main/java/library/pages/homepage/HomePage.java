@@ -1,6 +1,6 @@
 package library.pages.homepage;
 
-import static library.providers.PageTitleProvider.*;
+import static library.providers.PageTitleProvider.HOME_PAGE_TITLE;
 
 import java.time.Duration;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import library.dto.entites.company.Company;
 import library.exceptions.HomePageElementException;
 import library.left_menu.LeftMenu;
 import library.left_nav_bar.LeftNavBar;
-import library.nav.NavBarElement;
+import library.nav.nav_bar_elements.NavBarElement;
 import library.object_models.modules.ModuleElementsFactory;
 import library.pages.homepage.loader.ExistingHomePageLoader;
 import library.top_right_nav_bar.TopRightNavBar;

@@ -6,7 +6,6 @@ package library.nav.nav_bar_elements;
 import java.util.Optional;
 
 import library.common.forms.ContainerAction;
-import library.nav.NavBarElement;
 
 
 /**

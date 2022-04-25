@@ -14,7 +14,7 @@ import context_manager.states.State;
 import context_manager.states.StateTopRightNavBar;
 import library.common.forms.ContainerAction;
 import library.common.helpers.title.WebElementTitleChecker;
-import library.nav.NavBarElement;
+import library.nav.nav_bar_elements.NavBarElement;
 import library.nav.nav_bar_elements.NavBarElementGetter;
 import library.nav.nav_bar_elements.NavBarElementStrategy;
 import library.nav.quick_links.QuickLinks;

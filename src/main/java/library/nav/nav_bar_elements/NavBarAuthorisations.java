@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import core_data.CoreData;
 import library.common.helpers.element.Closable;
 import library.common.strategies.ClickUsingJavaScript;
-import library.nav.NavBarElement;
 
 /**
  * @author Steve Brown
