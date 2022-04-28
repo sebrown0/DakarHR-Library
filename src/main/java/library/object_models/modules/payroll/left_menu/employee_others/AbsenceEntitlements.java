@@ -1,4 +1,4 @@
-package library.object_models.modules.payroll.top_right_nav.employees;
+package library.object_models.modules.payroll.left_menu.employee_others;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -14,9 +14,9 @@ import control_builder.control_getters.group.ControlGetterGroup;
 import library.common.panels.JsPanelWithIFrame;
 import control_data.ControlData;
 import core_data.CoreData;
+import control_builder.control_getters.single.ControlGetterTextOut;
 import control_builder.control_getters.single.ControlGetterButton;
 import control_builder.control_getters.group.ControlGetterInputGroup;
-import library.helpers.employee_creation.EmployeeCreationWizard;
 
 /**
 * Generated Class.
@@ -28,47 +28,51 @@ import library.helpers.employee_creation.EmployeeCreationWizard;
 */
 
 @SuppressWarnings("unused")
-public class EmployeeCreation extends JsPanelWithIFrame {
+public class AbsenceEntitlements extends JsPanelWithIFrame {
 	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
-	public static final String PANEL_TITLE = "Employee Creation Wizard";
+	public static final String PANEL_TITLE = "Employee Absence Entitlements";
 	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
-	public static final String MENU_TITLE = "Employee Creation";
+	public static final String MENU_TITLE = "Absence Entitlements";
 	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
-	public static final String MENU_PARENT_NAME = "Employees";
+	public static final String MENU_PARENT_NAME = "Employee_others";
 
 	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
-	public EmployeeCreation(){}
+	public AbsenceEntitlements(){}
 
 	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
-	public EmployeeCreation(CoreData coreData){
+	public AbsenceEntitlements(CoreData coreData){
 		super(coreData, PANEL_TITLE);
 		buildMyControls();
 	}
 
 	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
 	private void buildMyControls() {
-		ControlGetter next =
-			new ControlGetterButton("Next", coreData, By.cssSelector("a[href='#next']"), this);
-		ControlGetterGroup pageFooterBtns =
-			new ControlGetterInputGroup("PageFooterBtns", coreData, By.cssSelector("ul[role='menu']"))
-				.addControls(Arrays.asList(next));
+		ControlGetter formID =
+			new ControlGetterTextOut("FormID", coreData, By.id("FORM_ID"), this);
+		ControlGetter employeeList =
+			new ControlGetterButton("EmployeeList", coreData, By.cssSelector("div[title='Search Employee']"), this);
+		ControlGetterGroup empLookup =
+			new ControlGetterInputGroup("EmpLookup", coreData, By.cssSelector("div[class='input-group']"))
+				.addControls(Arrays.asList(formID, employeeList));
 		var myControls =
 			List.of(
-				new ControlData(pageFooterBtns)
+				new ControlData(empLookup)
 			);
 		super.buildPanelControls(myControls);
 	}
 
-	public EmployeeCreationWizard getEmployeeCreationWizard() {
-		return new EmployeeCreationWizard(coreData);
+
+
+	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@TestControl(type="element", subtype="TextOut")
+	public DynamicTest TextOutFormIDFunctionTest () {
+		return DynamicTest.dynamicTest("[TextOutFormIDFunctionTest] *NOT IMPLEMENTED*", () -> assertTrue(true));
 	}
 
 	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
 	@TestControl(type="element", subtype="Button")
-	public DynamicTest ButtonNextFunctionTest () {
-		return DynamicTest.dynamicTest("[ButtonNextFunctionTest] Create existing employee", () -> {
-					TestFunction test = new CreateExitingEmployee();
-					test.run(coreData);
-				});	}
+	public DynamicTest ButtonEmployeeListFunctionTest () {
+		return DynamicTest.dynamicTest("[ButtonEmployeeListFunctionTest] *NOT IMPLEMENTED*", () -> assertTrue(true));
+	}
 
 }

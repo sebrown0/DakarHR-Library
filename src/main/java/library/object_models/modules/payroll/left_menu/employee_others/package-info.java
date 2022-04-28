@@ -6,4 +6,4 @@
 * Version: 1.0.0
 * Created: 28/04/2022 12:38:45
 */
-package library.object_models.modules.payroll.top_right_nav.employees;
+package library.object_models.modules.payroll.left_menu.employee_others;

@@ -39,7 +39,6 @@ library\nav\nav_bar_elements\NavBarElementStrategy.class
 library\object_models\modules\payroll\left_menu\Documents.class
 library\object_models\modules\ModuleElementsFactory.class
 library\object_models\modules\payroll\left_menu\payroll\CalculatePayroll.class
-library\nav\NavBarElement.class
 library\object_models\modules\payroll\left_menu\employees\Banks.class
 library\object_models\modules\personnel\PersonnelModuleElements$1.class
 library\helpers\login\UserLoginPage.class
@@ -58,6 +57,7 @@ library\object_models\modules\personnel\PersonnelModuleElements$2.class
 library\nav\nav_bar_elements\NavBarTerminations.class
 library\object_models\modules\payroll\left_menu\employees\Schedule.class
 library\exceptions\EmployeeTaxStatusException.class
+library\object_models\modules\payroll\left_menu\employee_others\AbsenceEntitlements.class
 library\object_models\modules\payroll\top_right_nav\NavBarPayrollElements.class
 library\helpers\employee_creation\WizardStepFive.class
 library\exceptions\HomePageElementException.class
@@ -98,6 +98,7 @@ library\object_models\modules\payroll\left_menu\employees\EmployeeDetails$EmpDet
 library\dk_grid\buttons\UploadGrid.class
 library\object_models\modules\payroll\left_menu\payroll\ExcelPayrollUploads.class
 library\object_models\modules\payroll\top_right_nav\employees\EmployeeCreation.class
+library\nav\nav_bar_elements\NavBarElement.class
 library\helpers\employee_creation\WizardStepThree.class
 library\object_models\modules\payroll\left_menu\reports\Payslips.class
 library\object_models\modules\payroll\left_menu\reports\AdjustmentsReports.class
@@ -147,6 +148,7 @@ library\dk_grid\DkGridToolBarReader.class
 library\enums\EmploymentType.class
 library\object_models\dialog\DialogOkCancel.class
 library\drop_down_forms\top_right_nav\UserAvatar.class
+library\object_models\modules\common\nav\nav_bar_elements\NavBarEmployeeCreation.class
 library\object_models\modules\payroll\left_menu\payroll\PayrollDetailsDrillDown.class
 library\object_models\modules\payroll\left_menu\bulk_updates\EmployeeCreation.class
 library\object_models\modal_forms\emp_selection\SelectEmpBySurname.class

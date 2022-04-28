@@ -3,6 +3,8 @@
  */
 package library.left_menu;
 
+import static utils.StringUtils.replaceUnderScoresWithSpaceAndAsPascalCase;
+
 import java.util.Map;
 import java.util.Optional;
 
@@ -54,39 +56,35 @@ public class LeftMenuActions {
 		return getMenuItemAsContainer(fieldGetter);
 	}
 
-	private Optional<ContainerAction> getMenuItemAsContainer(ClassFieldGetter fieldGetter) {
+	private Optional<ContainerAction> getMenuItemAsContainer(ClassFieldGetter fieldGetter) {				
 		Optional<String> prntName = fieldGetter.getParentName();
 		Optional<String> menuItem = fieldGetter.getMenuItemName();
 		
-		if(isChildMenuItem(prntName, menuItem)) {			
-			return clickParent(prntName.get()).loadElement(fieldGetter);			
-		}else if (isParentMenuItem(prntName)) {
-			return loadElement(fieldGetter);
-		}
+		if(prntName.isPresent()) {
+			var formattedName = 
+					replaceUnderScoresWithSpaceAndAsPascalCase(prntName.get());
+			
+			if(isChildMenuItem(formattedName, menuItem)) {			
+				return clickParent(formattedName).loadElement(fieldGetter);			
+			}else if (isParentMenuItem(formattedName)) {
+				return loadElement(fieldGetter);
+			}	
+		}		
 		return Optional.empty();
 	}
-
-	private boolean isChildMenuItem(Optional<String> prntName, Optional<String> menuIem) {
-		boolean retVal = false;
-		
-		if(prntName.isPresent()) {
-			if(prntName.get().length() > 1 && menuIem.isPresent()) {
-				retVal = true;
-			}
-		}
-		return retVal;
+	
+	private boolean isChildMenuItem(String prntName, Optional<String> menuIem) {		
+		if(prntName.length() > 1 && menuIem.isPresent()) {
+			return true;
+		}	
+		return false;
 	}
 	
-	private boolean isParentMenuItem(Optional<String> prntName) {
-		boolean retVal = false;
-		
-		if(prntName.isPresent()) {
-			String name = prntName.get();
-			if(name.equals("") || name.length() < 1) {
-				retVal = true;
-			}
-		}
-		return retVal;
+	private boolean isParentMenuItem(String prntName) {
+		if(prntName.equals("") || prntName.length() < 1) {
+			return true;
+		}		
+		return false;
 	}
 		
 	/*
