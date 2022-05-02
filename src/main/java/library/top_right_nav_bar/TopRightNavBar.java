@@ -14,10 +14,10 @@ import context_manager.states.State;
 import context_manager.states.StateTopRightNavBar;
 import library.common.forms.ContainerAction;
 import library.common.helpers.title.WebElementTitleChecker;
-import library.nav.nav_bar_elements.NavBarElement;
-import library.nav.nav_bar_elements.NavBarElementGetter;
-import library.nav.nav_bar_elements.NavBarElementStrategy;
-import library.nav.quick_links.QuickLinks;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElement;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElementGetter;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElementStrategy;
+import library.object_models.modules.common.nav.quick_links.QuickLinks;
 
 /**
  * @author SteveBrown

@@ -3,7 +3,7 @@
  */
 package library.left_menu;
 
-import static utils.StringUtils.replaceUnderScoresWithSpaceAndAsPascalCase;
+import static utils.text_utils.StringUtils.replaceUnderScoresWithSpaceAndAsPascalCase;
 
 import java.util.Map;
 import java.util.Optional;

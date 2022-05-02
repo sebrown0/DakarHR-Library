@@ -24,34 +24,34 @@ import library.helpers.employee_creation.EmployeeCreationWizard;
 * Source:  C:/Users/SteveBrown/eclipse-workspace/2021/DakarHR-Library/src/main/resources/xml/site_map.xml
 * Author:  SteveBrown
 * Version: 1.0.0
-* Created: 28/04/2022 12:38:45
+* Created: 02/05/2022 15:09:01
 */
 
 @SuppressWarnings("unused")
 public class EmployeeCreation extends JsPanelWithIFrame {
-	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	public static final String PANEL_TITLE = "Employee Creation Wizard";
-	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	public static final String MENU_TITLE = "Employee Creation";
-	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	public static final String MENU_PARENT_NAME = "Employees";
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	public EmployeeCreation(){}
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	public EmployeeCreation(CoreData coreData){
 		super(coreData, PANEL_TITLE);
 		buildMyControls();
 	}
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	private void buildMyControls() {
-		ControlGetter next =
-			new ControlGetterButton("Next", coreData, By.cssSelector("a[href='#next']"), this);
+		ControlGetter btnNext =
+			new ControlGetterButton("btnNext", coreData, By.cssSelector("a[href='#next']"), this);
 		ControlGetterGroup pageFooterBtns =
 			new ControlGetterInputGroup("PageFooterBtns", coreData, By.cssSelector("ul[role='menu']"))
-				.addControls(Arrays.asList(next));
+				.addControls(Arrays.asList(btnNext));
 		var myControls =
 			List.of(
 				new ControlData(pageFooterBtns)
@@ -63,7 +63,7 @@ public class EmployeeCreation extends JsPanelWithIFrame {
 		return new EmployeeCreationWizard(coreData);
 	}
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="28/04/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	@TestControl(type="element", subtype="Button")
 	public DynamicTest ButtonNextFunctionTest () {
 		return DynamicTest.dynamicTest("[ButtonNextFunctionTest] Create existing employee", () -> {

@@ -6,7 +6,7 @@ import library.common.helpers.element.Closable;
 import library.object_models.modules.common.nav.nav_bar_elements.NavBarElement;
 import core_data.CoreData;
 
-import library.object_models.modules.payroll.top_right_nav.employees.EmployeeCreation;
+import library.object_models.modules.payroll.top_right_nav.authorisation.Authorisations;
 
 /**
 * Generated Class.
@@ -14,21 +14,21 @@ import library.object_models.modules.payroll.top_right_nav.employees.EmployeeCre
 * Source:  C:/Users/SteveBrown/eclipse-workspace/2021/DakarHR-Library/src/main/resources/xml/site_map.xml
 * Author:  SteveBrown
 * Version: 1.0.0
-* Created: 02/05/2022 15:09:01
+* Created: 02/05/2022 16:33:47
 */
-public class NavBarEmployeeCreation extends NavBarElement {
-	public static final String ORIGINAL_NAME = "Employee Creation";
+public class NavBarAuthorisations extends NavBarElement {
+	public static final String ORIGINAL_NAME = "Authorisations";
 
-	public NavBarEmployeeCreation(CoreData coreData) {
+	public NavBarAuthorisations(CoreData coreData) {
 		super(coreData, ORIGINAL_NAME);
 	}
 
 	@Override
 	public Closable clickElement() {
 		WebElement el = 
-			super.getNavBar().findElement(By.xpath(".//li/a/i[contains(@class, 'fa fa-plus')]"));
+			super.getNavBar().findElement(By.xpath(".//li/a/i[contains(@class, 'fa fa-id-card')]"));
 		el.click();
-		return new EmployeeCreation(coreData);
+		return new Authorisations(coreData);
 	}
 
 }

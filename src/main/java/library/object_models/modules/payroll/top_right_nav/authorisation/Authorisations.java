@@ -1,4 +1,4 @@
-package library.object_models.modules.payroll.left_menu.employees;
+package library.object_models.modules.payroll.top_right_nav.authorisation;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -14,8 +14,10 @@ import control_builder.control_getters.group.ControlGetterGroup;
 import library.common.panels.JsPanelWithIFrame;
 import control_data.ControlData;
 import core_data.CoreData;
-import control_builder.control_getters.single.ControlGetterTextOut;
-import control_builder.control_getters.group.ControlGetterInputGroup;
+import control_builder.control_getters.single.ControlGetterLabel;
+import control_builder.control_getters.single.ControlGetterComboWriteAndSelect;
+import utils.text_writer.TextWriterComboMulti;
+import control_builder.control_getters.group.ControlGetterRow;
 
 /**
 * Generated Class.
@@ -27,43 +29,44 @@ import control_builder.control_getters.group.ControlGetterInputGroup;
 */
 
 @SuppressWarnings("unused")
-public class ContactNumbers extends JsPanelWithIFrame {
+public class Authorisations extends JsPanelWithIFrame {
 	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
-	public static final String PANEL_TITLE = "Employee Contact Details";
+	public static final String PANEL_TITLE = "Authorisations";
 	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
-	public static final String MENU_TITLE = "Contact Numbers";
+	public static final String MENU_TITLE = "Authorisations";
 	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
-	public static final String MENU_PARENT_NAME = "Employees";
+	public static final String MENU_PARENT_NAME = "Authorisation";
 
 	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
-	public ContactNumbers(){}
+	public Authorisations(){}
 
 	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
-	public ContactNumbers(CoreData coreData){
+	public Authorisations(CoreData coreData){
 		super(coreData, PANEL_TITLE);
 		buildMyControls();
 	}
 
 	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
 	private void buildMyControls() {
-		ControlGetter txoFormID =
-			new ControlGetterTextOut("txoFormID", coreData, By.id("FORM_ID"), this);
-		ControlGetterGroup empLookup =
-			new ControlGetterInputGroup("EmpLookup", coreData, By.cssSelector("div[class='input-group']"))
-				.addControls(Arrays.asList(txoFormID));
+		ControlGetter lblCompany =
+			new ControlGetterLabel("lblCompany", coreData, By.xpath(".//*[@class='col-md-2' and starts-with(text(),'Company')]"), this);
+		ControlGetter cwsCompany =
+			new ControlGetterComboWriteAndSelect(
+				"cwsCompany", coreData
+				, By.cssSelector("select[id='COMP_SELx']"),
+				By.className("select2-results"),
+				new TextWriterComboMulti(coreData, getContainer()));
+		ControlGetterGroup row1 =
+			new ControlGetterRow("Row1", coreData)
+				.addControls(Arrays.asList(lblCompany, cwsCompany));
 		var myControls =
 			List.of(
-				new ControlData(empLookup)
+				new ControlData(row1)
 			);
 		super.buildPanelControls(myControls);
 	}
 
 
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
-	@TestControl(type="element", subtype="TextOut")
-	public DynamicTest TextOutFormIDFunctionTest () {
-		return DynamicTest.dynamicTest("[TextOutFormIDFunctionTest] *NOT IMPLEMENTED*", () -> assertTrue(true));
-	}
 
 }

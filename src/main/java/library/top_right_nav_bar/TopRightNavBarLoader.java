@@ -12,7 +12,7 @@ import context_manager.ContextManager;
 import context_manager.ContextState;
 import library.common.forms.ContainerAction;
 import library.left_menu.MenuContextChecker;
-import library.nav.nav_bar_elements.NavBarElement;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElement;
 import utils.clazz.ClassFieldGetter;
 
 

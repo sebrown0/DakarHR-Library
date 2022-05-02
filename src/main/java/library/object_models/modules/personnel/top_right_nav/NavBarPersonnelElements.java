@@ -5,21 +5,21 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import core_data.CoreData;
-import library.nav.nav_bar_elements.NavBarDakarIntelligence;
-import library.nav.nav_bar_elements.NavBarElement;
-import library.nav.nav_bar_elements.NavBarElementStrategy;
-import library.nav.nav_bar_elements.NavBarEmpGridView;
-import library.nav.nav_bar_elements.NavBarEmployeeCVPayroll;
-import library.nav.nav_bar_elements.NavBarEmployeeCreation;
-import library.nav.nav_bar_elements.NavBarEmployeeCvHr;
-import library.nav.nav_bar_elements.NavBarMyCoLastViewed;
-import library.nav.nav_bar_elements.NavBarNewEmployments;
-import library.nav.nav_bar_elements.NavBarNotifications;
-import library.nav.nav_bar_elements.NavBarOrganisationChart;
-import library.nav.nav_bar_elements.NavBarTerminations;
-import library.nav.nav_bar_elements.NavBarVisualReports;
-import library.nav.quick_links.QuickLinks;
-import library.nav.quick_links.QuickLinksPersonnel;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarDakarIntelligence;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElement;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElementStrategy;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarEmpGridView;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarEmployeeCVPayroll;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarEmployeeCreation;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarEmployeeCvHr;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarMyCoLastViewed;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarNewEmployments;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarNotifications;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarOrganisationChart;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarTerminations;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarVisualReports;
+import library.object_models.modules.common.nav.quick_links.QuickLinks;
+import library.object_models.modules.common.nav.quick_links.QuickLinksPersonnel;
 
 /**
  * @author Steve Brown

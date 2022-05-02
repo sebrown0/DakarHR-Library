@@ -11,8 +11,7 @@ import java.util.Map;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import utils.text_utils.StringUtil;
-
+import static utils.text_utils.StringUtils.*;
 /**
  * @author Steve Brown
  *
@@ -30,7 +29,7 @@ public class Menu {
 	public void addElement(WebElement anchor) {
 		String href = anchor.getAttribute("href");
 		MenuItem element = new MenuItem(
-				StringUtil.getValueAt(anchor.getAttribute("href"), 2, ","), 
+				getValueAt(anchor.getAttribute("href"), 2, ","), 
 				null, 
 				href);
 		
@@ -51,7 +50,7 @@ public class Menu {
 			WebElement anchor = mlsh.findElement(By.tagName("a"));
 			href = anchor.getAttribute("href");
 			child = new MenuItem(
-					StringUtil.getValueAt(href, 2, ","), 
+					getValueAt(href, 2, ","), 
 					parent, 
 					href
 			);			

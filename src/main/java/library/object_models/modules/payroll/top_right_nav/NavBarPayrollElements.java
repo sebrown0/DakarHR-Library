@@ -1,14 +1,14 @@
 package library.object_models.modules.payroll.top_right_nav;
 
-import library.object_models.modules.common.nav.nav_bar_elements.NavBarEmployeeCreation;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarAuthorisations;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.openqa.selenium.WebDriver;
-import library.nav.nav_bar_elements.NavBarElement;
-import library.nav.nav_bar_elements.NavBarElementStrategy;
-import library.nav.quick_links.QuickLinks;
-import library.nav.quick_links.QuickLinksPayroll;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElement;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElementStrategy;
+import library.object_models.modules.common.nav.quick_links.QuickLinks;
+import library.object_models.modules.common.nav.quick_links.QuickLinksPayroll;
 import core_data.CoreData;
 
 /**
@@ -17,7 +17,7 @@ import core_data.CoreData;
 * Source:  C:/Users/SteveBrown/eclipse-workspace/2021/DakarHR-Library/src/main/resources/xml/site_map.xml
 * Author:  SteveBrown
 * Version: 1.0.0
-* Created: 28/04/2022 12:38:45
+* Created: 02/05/2022 16:33:47
 */
 
 public class NavBarPayrollElements implements NavBarElementStrategy {
@@ -33,7 +33,7 @@ public class NavBarPayrollElements implements NavBarElementStrategy {
 
 	private void setElements(){
 		elements = Stream.of(new Object[][] {{
-			NavBarEmployeeCreation.ORIGINAL_NAME, new NavBarEmployeeCreation(coreData)}
+			NavBarAuthorisations.ORIGINAL_NAME, new NavBarAuthorisations(coreData)}
 		}).collect(Collectors.toMap(data -> (String) data[0], data -> (NavBarElement) data[1])); 
 	}
 

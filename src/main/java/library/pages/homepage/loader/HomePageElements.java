@@ -5,8 +5,8 @@ import context_manager.contexts.Context;
 import core_data.CoreData;
 import library.dto.entites.company.Company;
 import library.left_menu.LeftMenu;
-import library.nav.nav_bar_elements.NavBarElementStrategy;
-import library.nav.quick_links.QuickLink;
+import library.object_models.modules.common.nav.nav_bar_elements.NavBarElementStrategy;
+import library.object_models.modules.common.nav.quick_links.QuickLink;
 import library.pages.homepage.HomePage;
 
 
