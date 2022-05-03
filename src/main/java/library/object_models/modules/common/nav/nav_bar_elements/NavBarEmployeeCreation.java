@@ -2,10 +2,9 @@ package library.object_models.modules.common.nav.nav_bar_elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import library.common.helpers.element.Closable;
-import library.object_models.modules.common.nav.nav_bar_elements.NavBarElement;
-import core_data.CoreData;
 
+import core_data.CoreData;
+import library.common.helpers.element.Closable;
 import library.object_models.modules.payroll.top_right_nav.employees.EmployeeCreation;
 
 /**
@@ -14,7 +13,7 @@ import library.object_models.modules.payroll.top_right_nav.employees.EmployeeCre
 * Source:  C:/Users/SteveBrown/eclipse-workspace/2021/DakarHR-Library/src/main/resources/xml/site_map.xml
 * Author:  SteveBrown
 * Version: 1.0.0
-* Created: 02/05/2022 15:09:01
+* Created: 03/05/2022 09:52:12
 */
 public class NavBarEmployeeCreation extends NavBarElement {
 	public static final String ORIGINAL_NAME = "Employee Creation";

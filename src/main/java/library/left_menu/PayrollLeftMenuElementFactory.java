@@ -14,6 +14,7 @@ import library.object_models.modules.payroll.left_menu.absence_statistics.Employ
 import library.object_models.modules.payroll.left_menu.absence_statistics.OtherAbsenceStatistics;
 import library.object_models.modules.payroll.left_menu.bulk_updates.ColaSalaryUpdates;
 import library.object_models.modules.payroll.left_menu.bulk_updates.EmployeeCreation;
+import library.object_models.modules.payroll.left_menu.employee_others.AbsenceEntitlements;
 import library.object_models.modules.payroll.left_menu.employee_others.Fs3QuickView;
 import library.object_models.modules.payroll.left_menu.employee_others.PayslipQuickView;
 import library.object_models.modules.payroll.left_menu.employees.Banks;
@@ -42,7 +43,6 @@ import library.object_models.modules.payroll.left_menu.reports.GlobalPayrollAnal
 import library.object_models.modules.payroll.left_menu.reports.HrRelatedReports;
 import library.object_models.modules.payroll.left_menu.reports.PayrollReports;
 import library.object_models.modules.payroll.left_menu.reports.Payslips;
-import library.object_models.modules.payroll.left_menu.employee_others.AbsenceEntitlements;
 
 /**
  * @author SteveBrown

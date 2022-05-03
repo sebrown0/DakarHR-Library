@@ -15,8 +15,8 @@ import library.common.panels.JsPanelWithIFrame;
 import control_data.ControlData;
 import core_data.CoreData;
 import control_builder.control_getters.single.ControlGetterLabel;
-import control_builder.control_getters.single.ControlGetterComboWriteAndSelect;
-import utils.text_writer.TextWriterComboMulti;
+import control_builder.control_getters.single.ControlGetterTextSelect;
+import control_builder.control_getters.single.ControlGetterButton;
 import control_builder.control_getters.group.ControlGetterRow;
 
 /**
@@ -25,43 +25,47 @@ import control_builder.control_getters.group.ControlGetterRow;
 * Source:  C:/Users/SteveBrown/eclipse-workspace/2021/DakarHR-Library/src/main/resources/xml/site_map.xml
 * Author:  SteveBrown
 * Version: 1.0.0
-* Created: 02/05/2022 16:33:47
+* Created: 03/05/2022 10:50:04
 */
 
 @SuppressWarnings("unused")
 public class Authorisations extends JsPanelWithIFrame {
-	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="03/05/2022")
 	public static final String PANEL_TITLE = "Authorisations";
-	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="03/05/2022")
 	public static final String MENU_TITLE = "Authorisations";
-	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="03/05/2022")
 	public static final String MENU_PARENT_NAME = "Authorisation";
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="03/05/2022")
 	public Authorisations(){}
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="03/05/2022")
 	public Authorisations(CoreData coreData){
 		super(coreData, PANEL_TITLE);
 		buildMyControls();
 	}
 
-	@SiteMap(author="SteveBrown", version="1.0.0", date="02/05/2022")
+	@SiteMap(author="SteveBrown", version="1.0.0", date="03/05/2022")
 	private void buildMyControls() {
 		ControlGetter lblCompany =
 			new ControlGetterLabel("lblCompany", coreData, By.xpath(".//*[@class='col-md-2' and starts-with(text(),'Company')]"), this);
-		ControlGetter cwsCompany =
-			new ControlGetterComboWriteAndSelect(
-				"cwsCompany", coreData
-				, By.cssSelector("select[id='COMP_SELx']"),
-				By.className("select2-results"),
-				new TextWriterComboMulti(coreData, getContainer()));
-		ControlGetterGroup row1 =
-			new ControlGetterRow("Row1", coreData)
-				.addControls(Arrays.asList(lblCompany, cwsCompany));
+		ControlGetter tslCompany =
+			new ControlGetterTextSelect(
+				"tslCompany", coreData, By.cssSelector("select[id='COMP_SELx']"));
+		ControlGetter lblGroupingView =
+			new ControlGetterLabel("lblGroupingView", coreData, By.xpath(".//*[@class='col-md-2' and starts-with(text(),'Grouping View')]"), this);
+		ControlGetter tslGroupingView =
+			new ControlGetterTextSelect(
+				"tslGroupingView", coreData, By.cssSelector("select[id='VIEW_SELx']"));
+		ControlGetter btnAcceptCriteria =
+			new ControlGetterButton("btnAcceptCriteria", coreData, By.cssSelector("button[name='SEARCH']"), this);
+		ControlGetterGroup row1InHeader =
+			new ControlGetterRow("Row1InHeader", coreData)
+				.addControls(Arrays.asList(lblCompany, tslCompany, lblGroupingView, tslGroupingView, btnAcceptCriteria));
 		var myControls =
 			List.of(
-				new ControlData(row1)
+				new ControlData(row1InHeader)
 			);
 		super.buildPanelControls(myControls);
 	}

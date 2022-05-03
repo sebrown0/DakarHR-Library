@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import control_data.ControlData;
 import core_data.CoreData;
-import factories.ControlDataFactory;
+import legacy.ControlDataFactory;
 import library.common.controls.button.Button;
 import library.common.controls.with_text.TextSelect;
 import library.common.forms.FormWithIFrame;

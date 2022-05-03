@@ -5,7 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 
 import control_data.ControlData;
-import factories.ControlDataFactory;
+import legacy.ControlDataFactory;
 import library.common.controls.interfaces.ControlTest;
 import library.element.ElementControls;
 import library.enums.control_names.CommonControlNames;
